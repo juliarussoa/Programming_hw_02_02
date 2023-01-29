@@ -1,0 +1,24 @@
+import numpy as np 
+import pandas as pd 
+import seaborn as sns
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.api as sm
+
+import sklearn
+from sklearn import metrics 
+from sklearn.metrics import roc_auc_score
+
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+
+#note: this should be changed with your directory information
+df = pd.read_csv("/Users/juliarusso/Downloads/City_zhvi_bdrmcnt_1_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv")
+
+df.head()
+
+#To get the results only for Miami
+df_Miami = df[df['RegionName'] == 'Miami']
+df_Miami.head()
